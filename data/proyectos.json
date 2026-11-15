@@ -1,0 +1,47 @@
+[
+  {
+    "id": "duplex",
+    "title": "Construcción Duplex",
+    "description": "Creación de departamento de interior con dos pisos, 3 habitaciones, cocina, living-comedor y baño",
+    "category": "hogar",
+    "published": true,
+    "project_images": [
+      { "url": "images/casa6.jpg", "position": 0 },
+      { "url": "images/casa5.jpg", "position": 1 },
+      { "url": "images/casa1.jpg", "position": 2 },
+      { "url": "images/casa2.jpg", "position": 3 },
+      { "url": "images/casa3.jpg", "position": 4 },
+      { "url": "images/casa4.jpg", "position": 5 },
+      { "url": "images/casa7.jpg", "position": 6 }
+    ]
+  },
+  {
+    "id": "bano",
+    "title": "Reparación de Baño",
+    "description": "Renovación de ventilación en baño principal",
+    "category": "hogar",
+    "published": true,
+    "project_images": [
+      { "url": "images/bano.jpg", "position": 0 },
+      { "url": "images/ventilacion.jpg", "position": 1 },
+      { "url": "images/ventilacion2.jpg", "position": 2 },
+      { "url": "images/ventilacion3.jpg", "position": 3 }
+    ]
+  },
+  {
+    "id": "carro",
+    "title": "Construcción carro",
+    "description": "Carro para venta de pescadería en ferias libres",
+    "category": "carros",
+    "published": true,
+    "project_images": [
+      { "url": "images/carro6.jpg", "position": 0 },
+      { "url": "images/carro2.jpg", "position": 1 },
+      { "url": "images/carro3.jpg", "position": 2 },
+      { "url": "images/carro4.jpg", "position": 3 },
+      { "url": "images/carro5.jpg", "position": 4 },
+      { "url": "images/carro7.jpg", "position": 5 },
+      { "url": "images/carro1.jpg", "position": 6 }
+    ]
+  }
+]

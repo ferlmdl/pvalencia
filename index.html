@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PV Servicios · Maestro a domicilio</title>
+  <meta name="description" content="Don Pedro, maestro a domicilio con más de 15 años de experiencia: construcción, remodelación, electricidad, gasfitería, carpintería, soldadura y pintura.">
+  <meta property="og:title" content="PV Servicios · Maestro a domicilio">
+  <meta property="og:description" content="Construcción, remodelación y mantenimiento de tu hogar o negocio. Más de 15 años de experiencia.">
+  <meta property="og:image" content="https://pvalencia.cl/images/casa6.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a3b70">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="#" aria-label="PV Servicios, inicio">
+        <span class="brand__mark">PV</span>
+        <span class="brand__text">Servicios<small>Maestro a domicilio</small></span>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#por-que">Por qué elegirnos</a>
+      </nav>
+      <a class="btn btn--wa btn--sm" data-wa href="https://wa.me/56988691325" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__copy">
+          <p class="eyebrow">PV Servicios · Don Pedro</p>
+          <h1>Maestro a domicilio con más de <em>15 años</em> de experiencia</h1>
+          <p class="lead">Soluciones integrales para construcción, remodelación y mantenimiento de tu hogar o negocio.</p>
+          <div class="hero__cta">
+            <a class="btn btn--wa" data-wa href="https://wa.me/56988691325" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              Pedir presupuesto
+            </a>
+            <a class="btn btn--ghost" href="#trabajos">Ver trabajos</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>+15</strong> años de experiencia</li>
+            <li><strong>Gratis</strong> consulta sin compromiso</li>
+          </ul>
+        </div>
+        <div class="hero__photos" aria-hidden="true">
+          <img src="images/casa6.jpg" alt="" width="1200" height="1600">
+          <img src="images/carro6.jpg" alt="" width="1200" height="1600">
+          <img src="images/casa1.jpg" alt="" width="1200" height="1600">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Nuestros servicios</p>
+          <h2>Expertos en múltiples áreas de la construcción y mantenimiento</h2>
+        </header>
+        <ul class="services">
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hammer"/></svg>
+            <h3>Construcción y Remodelación</h3>
+            <p>Desde pequeñas reparaciones hasta proyectos completos de remodelación.</p>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"/></svg>
+            <h3>Instalaciones Eléctricas</h3>
+            <p>Soluciones seguras y eficientes para tus necesidades eléctricas.</p>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-drop"/></svg>
+            <h3>Plomería y Cañerías</h3>
+            <p>Reparación e instalación de sistemas de agua y desagüe.</p>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-saw"/></svg>
+            <h3>Carpintería y Soldaduras</h3>
+            <p>Cocinas, closets y estanterías personalizadas según tus necesidades.</p>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-roller"/></svg>
+            <h3>Pintura y Acabados</h3>
+            <p>Trabajos increíbles de pintura interior y exterior.</p>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wrench"/></svg>
+            <h3>Reparaciones Generales</h3>
+            <p>Solución a todo tipo de problemas en el hogar.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="trabajos">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow">Trabajos realizados</p>
+          <h2>Mira lo que hemos construido</h2>
+        </header>
+        <div class="filters" id="filtros" role="group" aria-label="Filtrar trabajos por tipo"></div>
+        <div class="projects" id="proyectos" aria-live="polite">
+          <p class="muted">Cargando trabajos…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="por-que">
+      <div class="wrap why">
+        <header class="section__head">
+          <p class="eyebrow">Confianza</p>
+          <h2>¿Por qué elegir a Don Pedro?</h2>
+        </header>
+        <ol class="why__list">
+          <li><h3>Más de 15 años de experiencia</h3><p>Conocimiento acumulado en cientos de proyectos exitosos.</p></li>
+          <li><h3>Materiales de primera calidad</h3><p>Trabajamos con los mejores proveedores para garantizar durabilidad.</p></li>
+          <li><h3>Cumplimiento de plazos</h3><p>Nos comprometemos con los tiempos acordados.</p></li>
+          <li><h3>Limpieza y orden</h3><p>Dejamos tu espacio impecable al finalizar cada trabajo.</p></li>
+          <li><h3>Precios accesibles</h3><p>Soluciones de calidad al alcance de tu bolsillo.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="wrap cta__in">
+        <div>
+          <h2>¿Listo para transformar tu espacio?</h2>
+          <p>Contáctanos hoy mismo para una consulta gratuita y sin compromiso.</p>
+        </div>
+        <a class="btn btn--wa btn--lg" data-wa href="https://wa.me/56988691325" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span>Escríbenos al <span data-wa-number>+56 9 8869 1325</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <p>© <span id="anio">2026</span> PV Servicios · Maestro a domicilio</p>
+      <a href="admin.html">Acceso administrador</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lb-titulo">
+    <div class="lightbox__stage">
+      <img id="lb-img" alt="">
+      <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" type="button" aria-label="Foto anterior">‹</button>
+      <button class="lightbox__nav lightbox__nav--next" id="lb-next" type="button" aria-label="Foto siguiente">›</button>
+      <button class="lightbox__close" id="lb-close" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <div class="lightbox__info">
+      <div>
+        <h3 id="lb-titulo"></h3>
+        <p id="lb-desc"></p>
+      </div>
+      <span class="lightbox__count" id="lb-count"></span>
+    </div>
+  </dialog>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.3 4c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.300s.900 2.700 1.100 2.900c.100.200 1.900 3 4.700 4.100 2.300.900 2.800.700 3.300.700.500-.100 1.600-.700 1.800-1.300.200-.600.200-1.200.200-1.300-.100-.100-.300-.200-.600-.300l-1.900-.900c-.300-.100-.500-.100-.700.100l-.800 1c-.200.200-.300.200-.600.100-.300-.200-1.200-.500-2.300-1.400-.800-.800-1.400-1.700-1.600-2-.200-.300 0-.500.100-.600l.500-.600.300-.500v-.500l-.900-2c-.200-.500-.400-.500-.600-.500h-.300Z"/></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m14 7-9.500 9.500a2.100 2.100 0 0 0 3 3L17 10M12.500 5.500 15 3l6 6-2.500 2.500M11 4l9 9"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3s6 6.200 6 11a6 6 0 0 1-12 0c0-4.800 6-11 6-11ZM9 14.500a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-saw" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 7h13l5 5v2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1V7Zm3 3.500h4"/></symbol>
+    <symbol id="i-roller" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 4h13v5H4zM17 6.500h3v6h-8V16m-1.500 0h3v5h-3z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14.500 6.500a4.500 4.500 0 0 0-6 5.600L3 17.600 6.400 21l5.500-5.500a4.500 4.500 0 0 0 5.600-6L14.500 12.500l-3-3 3-3Z"/></symbol>
+  </svg>
+
+  <script src="vendor/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración · PV Servicios</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a3b70">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="index.html" aria-label="Volver al sitio">
+        <span class="brand__mark">PV</span>
+        <span class="brand__text">Servicios<small>Administración</small></span>
+      </a>
+      <div class="account" id="cuenta" hidden>
+        <span class="account__email" id="cuenta-email"></span>
+        <button class="linkbtn" id="btn-clave" type="button">Cambiar contraseña</button>
+        <button class="linkbtn" id="btn-salir" type="button">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap admin__main">
+    <p class="muted" id="v-cargando">Cargando…</p>
+
+    <!-- Supabase sin configurar -->
+    <section class="panel panel--narrow" id="v-config" hidden>
+      <h1>Falta conectar la base de datos</h1>
+      <p>El panel de administración necesita un proyecto de Supabase. Sigue los pasos del archivo <code>README.md</code> y pega las dos claves en <code>js/config.js</code>.</p>
+      <a class="btn btn--primary" href="index.html">Volver al sitio</a>
+    </section>
+
+    <!-- Ingreso -->
+    <section class="panel panel--narrow" id="v-login" hidden>
+      <h1>Ingresar</h1>
+      <p class="muted">Solo para administradores de PV Servicios.</p>
+      <form id="form-login" novalidate>
+        <label>Correo
+          <input type="email" name="email" autocomplete="username" required>
+        </label>
+        <label>Contraseña
+          <input type="password" name="password" autocomplete="current-password" required>
+        </label>
+        <p class="msg" id="login-msg" role="alert" hidden></p>
+        <button class="btn btn--primary btn--block" type="submit">Ingresar</button>
+        <button class="linkbtn linkbtn--dark" id="btn-olvide" type="button">Olvidé mi contraseña</button>
+      </form>
+    </section>
+
+    <!-- Nueva contraseña -->
+    <section class="panel panel--narrow" id="v-clave" hidden>
+      <h1>Nueva contraseña</h1>
+      <form id="form-clave" novalidate>
+        <label>Contraseña nueva (mínimo 8 caracteres)
+          <input type="password" name="password" autocomplete="new-password" minlength="8" required>
+        </label>
+        <label>Repite la contraseña
+          <input type="password" name="password2" autocomplete="new-password" minlength="8" required>
+        </label>
+        <p class="msg" id="clave-msg" role="alert" hidden></p>
+        <div class="row">
+          <button class="btn btn--primary" type="submit">Guardar contraseña</button>
+          <button class="btn btn--plain" id="btn-clave-cancelar" type="button">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Sin permisos -->
+    <section class="panel panel--narrow" id="v-denegado" hidden>
+      <h1>Sin permiso</h1>
+      <p>Tu cuenta no tiene el rol de administrador, así que no puede editar el sitio.</p>
+      <button class="btn btn--primary" id="btn-salir-2" type="button">Salir</button>
+    </section>
+
+    <!-- Lista de trabajos -->
+    <section id="v-lista" hidden>
+      <div class="listhead">
+        <div>
+          <h1>Trabajos</h1>
+          <p class="muted" id="lista-resumen"></p>
+        </div>
+        <button class="btn btn--primary" id="btn-nuevo" type="button">+ Nuevo trabajo</button>
+      </div>
+      <p class="msg" id="lista-msg" role="alert" hidden></p>
+      <ul class="rows" id="lista"></ul>
+    </section>
+
+    <!-- Editor -->
+    <section id="v-editor" hidden>
+      <button class="linkbtn linkbtn--dark" id="btn-volver" type="button">‹ Volver a trabajos</button>
+      <h1 id="editor-titulo">Nuevo trabajo</h1>
+      <form class="panel" id="form-trabajo" novalidate>
+        <label>Título
+          <input type="text" name="title" maxlength="120" required placeholder="Ej: Ampliación de cocina">
+        </label>
+        <label>Descripción
+          <textarea name="description" rows="4" maxlength="2000" placeholder="Cuenta brevemente qué se hizo"></textarea>
+        </label>
+        <label>Tipo de trabajo
+          <select name="category" id="sel-categoria"></select>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="published" checked>
+          <span>Publicado <small>(si lo desmarcas queda como borrador y nadie lo ve)</small></span>
+        </label>
+
+        <fieldset>
+          <legend>Fotos</legend>
+          <p class="muted small">La primera foto es la portada. Puedes elegir varias a la vez.</p>
+          <ul class="photos" id="fotos"></ul>
+          <label class="btn btn--plain filebtn">
+            + Agregar fotos
+            <input type="file" id="input-fotos" accept="image/*" multiple>
+          </label>
+        </fieldset>
+
+        <p class="msg" id="editor-msg" role="alert" hidden></p>
+        <div class="row">
+          <button class="btn btn--primary" id="btn-guardar" type="submit">Guardar</button>
+          <button class="btn btn--plain" id="btn-cancelar" type="button">Cancelar</button>
+          <button class="btn btn--danger" id="btn-eliminar" type="button" hidden>Eliminar trabajo</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="vendor/supabase.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
